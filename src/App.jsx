@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
-import "./App.css";
 import axios from "axios";
-import Header from "./assets/components/Header";
+
+import "./App.css";
 import "./assets/font/stylesheet.css";
 import "./assets/icon/style.css";
-import Menu from "./assets/components/Menu";
+
+import Header from "./assets/components/header/Header";
+import Menu from "./assets/components/menu/Menu";
+import Restaurant from "./assets/components/restaurant/Restaurant";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [categoryLists, setCategoryLists] = useState();
+  const [restaurant, setRestaurant] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = async () => {
@@ -16,7 +20,10 @@ function App() {
       const response = await axios.get(
         "https://site--deliveroo-backend--fwddjdqr85yq.code.run/"
       );
-      setData(response.data);
+      setCategoryLists(
+        response.data.categories.filter((meal) => meal.meals.length > 0)
+      );
+      setRestaurant(response.data.restaurant);
       setIsLoading(false);
     } catch (error) {
       console.error("error", error);
@@ -34,7 +41,14 @@ function App() {
       {isLoading ? (
         <span>"En cours de chargement"</span>
       ) : (
-        <Menu data={data} isLoading={isLoading} nanoid={nanoid} />
+        <main>
+          <Restaurant restaurant={restaurant} />
+          <Menu
+            categoryLists={categoryLists}
+            isLoading={isLoading}
+            nanoid={nanoid}
+          />{" "}
+        </main>
       )}
     </>
   );

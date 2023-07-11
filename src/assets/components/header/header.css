@@ -1,0 +1,8 @@
+header {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgb(211, 208, 208);
+}
+
+header img {
+  width: 16rem;
+}
