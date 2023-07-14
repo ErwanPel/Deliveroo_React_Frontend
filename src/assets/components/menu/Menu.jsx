@@ -82,7 +82,11 @@ export default function Menu({
         {!formMobile ? (
           <button
             type="button"
-            className={shopLists.length === 0 ? "see-bag" : "see-bag-buy"}
+            className={
+              shopLists.length === 0
+                ? "see-bag mobile-button"
+                : "see-bag-buy mobile-button"
+            }
             onClick={getMobileForm}
           >
             {" "}
@@ -91,7 +95,11 @@ export default function Menu({
         ) : (
           <button
             type="submit"
-            className={shopLists.length === 0 ? "see-bag" : "see-bag-buy"}
+            className={
+              shopLists.length === 0
+                ? "see-bag mobile-button"
+                : "see-bag-buy mobile-button"
+            }
             onClick={getMobileForm}
           >
             {" "}

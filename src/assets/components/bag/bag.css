@@ -66,24 +66,36 @@
 }
 
 .article-mobile {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 3rem;
-  font-size: 1.4rem;
-  font-weight: bold;
-  padding: 0.8rem;
-  background-color: rgb(59, 59, 63);
+  display: none;
 }
 
 .price-mobile {
-  position: absolute;
-  bottom: 2.5rem;
-  right: 3rem;
-  font-size: 1.4rem;
-  font-weight: bold;
-  padding: 0.8rem;
+  display: none;
 }
 
-.price-mobile p {
-  color: white;
+@media (max-width: 770px) {
+  .article-mobile {
+    display: block;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.8rem;
+    background-color: rgb(59, 59, 63);
+  }
+
+  .price-mobile {
+    display: block;
+    position: absolute;
+    bottom: 2.5rem;
+    right: 3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.8rem;
+  }
+
+  .price-mobile p {
+    color: white;
+  }
 }

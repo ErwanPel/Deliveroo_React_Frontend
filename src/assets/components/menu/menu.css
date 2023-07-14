@@ -79,16 +79,6 @@
   margin-right: 1.5rem;
 }
 
-.form > button {
-  width: 33rem;
-  padding: 1.6rem 0;
-  border: none;
-
-  font-size: 1.6rem;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
 .mobile-close {
   display: none;
 }
@@ -96,6 +86,12 @@
 .button-disabled {
   background-color: #c7c5c5;
   color: #8b9a9b;
+  width: 33rem;
+  padding: 1.6rem 0;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 .button-disabled:hover {
@@ -105,6 +101,12 @@
 .button-buy {
   background-color: #00ccbc;
   color: white;
+  width: 33rem;
+  padding: 1.6rem 0;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 .button-buy:active {
@@ -133,6 +135,10 @@ form {
   font-size: 1.6rem;
 }
 
+.mobile-button {
+  display: none;
+}
+
 /* ------------ media query 1124px---------------------------- */
 
 @media (max-width: 1124px) {
@@ -152,6 +158,10 @@ form {
 @media (max-width: 770px) {
   #menu {
     flex-direction: column;
+  }
+
+  .mobile-button {
+    display: block;
   }
 
   .hidden {
