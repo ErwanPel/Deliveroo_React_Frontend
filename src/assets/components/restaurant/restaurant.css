@@ -4,6 +4,7 @@
   padding: 2rem 0;
   gap: 2rem;
   height: fit-content;
+  margin-right: 1.5rem;
 }
 
 #presentation > div {
@@ -32,7 +33,7 @@
   #presentation {
     display: flex;
     flex-direction: column-reverse;
-    gap: 2rem;
+    gap: 3rem;
     padding: 0;
     margin-bottom: 4rem;
   }

@@ -2,6 +2,7 @@
   padding-top: 3rem;
   background-color: #e7e3cb;
   display: flex;
+  gap: 3rem;
 }
 
 /* -------------categories---------------------------- */
@@ -20,20 +21,24 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 5rem;
-  border: 1px blue solid;
   justify-content: space-between;
 }
 
 .meal-single {
-  border: 1px solid red;
   background-color: white;
   border-radius: 15px;
   align-items: center;
   justify-content: space-between;
   display: flex;
   width: calc((100% - 1.9rem) / 2);
+  margin-bottom: 2rem;
   height: 16rem;
   padding: 2rem;
+}
+
+.meal-single:hover {
+  cursor: pointer;
+  box-shadow: 3px 8px 20px rgba(73, 73, 73, 0.411);
 }
 
 .meal-text {
@@ -65,9 +70,67 @@
 
 .shop-bloc {
   width: 35rem;
-  height: 30rem;
-  background-color: aquamarine;
+  min-height: 19rem;
+  background-color: white;
+  border-radius: 10px;
   position: sticky;
+  top: 2rem;
+  height: fit-content;
+  margin-right: 1.5rem;
+}
+
+.form > button {
+  width: 33rem;
+  padding: 1.6rem 0;
+  border: none;
+
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.mobile-close {
+  display: none;
+}
+
+.button-disabled {
+  background-color: #c7c5c5;
+  color: #8b9a9b;
+}
+
+.button-disabled:hover {
+  cursor: not-allowed;
+}
+
+.button-buy {
+  background-color: #00ccbc;
+  color: white;
+}
+
+.button-buy:active {
+  opacity: 0.8;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.shop-form {
+  width: 100%;
+}
+
+.empty-bag {
+  height: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
 }
 
 /* ------------ media query 1124px---------------------------- */
@@ -75,20 +138,71 @@
 @media (max-width: 1124px) {
   .meal-single {
     width: 100%;
+    margin-bottom: 0;
   }
   .meals-bloc {
     width: 100%;
+    flex-direction: column;
+    gap: 2rem;
   }
 }
 
 /* ------------ media query 770px---------------------------- */
 
-@media (max-width: 890px) {
+@media (max-width: 770px) {
   #menu {
     flex-direction: column;
   }
 
+  .hidden {
+    display: none;
+  }
+
   .shop-bloc {
-    width: 100%;
+    background-color: white;
+    bottom: 0vh;
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 8rem;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .see-bag {
+    width: 95%;
+    height: 6rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(206, 206, 206);
+    color: white;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+
+  .see-bag-buy {
+    width: 95%;
+    height: 6rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(126, 49, 141);
+    color: white;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+
+  .mobile-close {
+    display: block;
+    align-self: flex-end;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  .mobile-close:hover {
+    cursor: pointer;
   }
 }

@@ -1,7 +1,6 @@
 import "./restaurant.css";
 
 export default function Restaurant({ restaurant }) {
-  console.log("restaurant =====", restaurant);
   return (
     <section id="presentation" className="wrapper">
       <div>

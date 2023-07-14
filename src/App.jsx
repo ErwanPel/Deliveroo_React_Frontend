@@ -14,6 +14,8 @@ function App() {
   const [categoryLists, setCategoryLists] = useState();
   const [restaurant, setRestaurant] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [shopLists, setShopLists] = useState([]);
+  const [formMobile, setFormMobile] = useState(false);
 
   const fetchData = async () => {
     try {
@@ -45,8 +47,11 @@ function App() {
           <Restaurant restaurant={restaurant} />
           <Menu
             categoryLists={categoryLists}
-            isLoading={isLoading}
             nanoid={nanoid}
+            shopLists={shopLists}
+            setShopLists={setShopLists}
+            formMobile={formMobile}
+            setFormMobile={setFormMobile}
           />{" "}
         </main>
       )}

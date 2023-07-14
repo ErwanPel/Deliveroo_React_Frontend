@@ -1,0 +1,89 @@
+.meal-bag,
+.total-step1,
+.total-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 1.4rem;
+  height: 7rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.meal-bag span,
+.total-step1 span {
+  color: #2e3333;
+}
+
+.meal-bag > :first-child {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.meal-bag button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: #00ccbc 1px solid;
+}
+
+.title-menu-bag {
+  width: 17rem;
+}
+
+.quantity-bloc {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.total-step1 {
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.total-step1 > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+}
+
+.total-end span {
+  font-weight: bold;
+  color: #2e3333;
+  font-size: 1.6rem;
+}
+
+.article-mobile {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.8rem;
+  background-color: rgb(59, 59, 63);
+}
+
+.price-mobile {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.8rem;
+}
+
+.price-mobile p {
+  color: white;
+}
