@@ -19,7 +19,19 @@ export default function Menu({
     if (shopLists.lenght !== 0) setFormMobile(() => true);
   };
 
-  console.log(shopLists.length);
+  let sum = 0;
+  shopLists.map((element) => {
+    sum = sum + element.price * element.quantity;
+  });
+
+  let article = 0;
+  shopLists.map((element) => {
+    article = article + element.quantity;
+  });
+  console.log("ici", shopLists.length);
+
+  shopLists.length === 0 && setFormMobile(false);
+
   return (
     <section id="menu">
       <div className="categories-bloc">
@@ -106,6 +118,22 @@ export default function Menu({
             Valider le panier
           </button>
         )}
+        <div className="article-mobile">
+          {shopLists.length > 0 && (
+            <p
+              style={{
+                backgroundColor:
+                  shopLists.length > 0 ? "rgb(59, 59, 63)" : "transparent",
+                padding: shopLists.length > 0 && "0.8rem",
+              }}
+            >
+              {article}
+            </p>
+          )}
+        </div>
+        <div className="price-mobile">
+          {shopLists.length > 0 && <p>{intl.format(sum + 2.5)}</p>}
+        </div>
         <form className={formMobile ? "" : "hidden"}>
           <p className="mobile-close" onClick={() => setFormMobile(false)}>
             X

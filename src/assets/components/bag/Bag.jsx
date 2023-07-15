@@ -91,12 +91,6 @@ export default function Bag({ shopLists, setShopLists, intl, formMobile }) {
         <span>Total</span>
         <span>{intl.format(sum + shippingFees)}</span>
       </div>
-      <div className="article-mobile">
-        <p>{article}</p>
-      </div>
-      <div className="price-mobile">
-        <p>{intl.format(sum + shippingFees)}</p>
-      </div>
     </div>
   );
 }
